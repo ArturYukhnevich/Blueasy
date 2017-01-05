@@ -1,0 +1,28 @@
+//menu
+.horizontal-nav
+
+  &.black-font a
+    color: $font
+
+  @extend .ul-unstyled
+  li
+    display: inline-block
+    margin-left: 15px
+    a
+      @extend .text-uppercase
+      +transition(all, 0.3s, ease-in-out)
+      display: block
+      color: #fff
+      border: 2px solid transparent
+      font-weight: 600
+      text-decoration: none
+      padding: 10px 17px
+      line-height: 1
+      &.active
+        border-color: $accent
+        color: $accent
+      &:hover
+        color: $accent
+
+
+      

@@ -1,0 +1,107 @@
+.site-header
+  +bg-img('header.png')
+
+  img
+    margin-top: (38px - 23px) / 2
+
+.site-nav
+  background-color: $overlay
+  background-color: transparentize($overlay, .15)
+  padding: 58px 0
+
+  .horizontal-nav
+    color: #fff
+    float: right
+
+.hero-heading
+  @extend .text-uppercase
+  margin: 250px 0
+  color: #fff
+  font-weight: 300
+  font-size: 3em
+  text-align: center
+
+  span
+    background-color: transparentize($overlay, .25)
+    display: inline-block
+    padding: 0 20px
+
+    &:first-child
+      margin-bottom: 12px
+
+
+//Service
+
+.stn-heading
+  @extend .text-uppercase
+  font-size: 2.144em
+  font-weight: 300
+  padding-bottom: 40px
+  margin-top: 0
+
+  &:after
+    content: ''
+    width: 45px
+    height: 2px
+    background-color: #fff
+
+  &.black-line:after
+    background-color: $font
+
+.stn-service
+  @extend .std-padding
+  background-color: $accent
+  color: #fff
+
+  h3
+    @extend .text-uppercase
+    font-size: 1.744em
+    font-weight: 500
+
+  [class^="col-"]
+    @media (max-width: 1200px)
+      margin-bottom: 50px
+
+//Portfolio
+.stn-portfolio
+  @extend .std-padding
+  color: $font
+
+  .horizontal-nav
+    float: right
+
+  .stn-heading
+    margin-bottom: 40px
+
+.thumb-row a
+  position: relative
+  display: block
+  height: 270px
+  margin: 15px 0
+  background-color: #979797
+  opacity: .8
+  color: #fff
+  font-size: 72px
+  text-align: center
+  font-weight: 300
+
+  &:after
+    position: absolute
+    content: '+'
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #454e55
+    background-color: transparentize(#454e55, .20)
+    line-height: 1
+    opacity: 0
+    transition: all 0.3s ease-in-out
+
+  &:hover:after
+    opacity: 1
+    line-height: (270 / 72)
+
+@for $i from 1 through 8
+  .thumb-#{$i}
+    +bg-img('thumb' + $i + '.png')

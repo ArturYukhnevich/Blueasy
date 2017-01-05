@@ -1,0 +1,19 @@
+=font($font-url, $font-name, $font-weight: normal, $font-style: normal)
+  font-family: $font-name
+  src: url($font-folder + $font-url + '.eot')
+  src: url($font-folder + $font-url + '.woff') format('woff')
+  src: url($font-folder + $font-url + '.ttf') format('truetype')
+  font-weight: $font-weight
+  font-style: $font-style
+
+=transition($prop: all, $time: 0.3s, $ease: ease-in-out)
+  transition: $prop $time $ease
+
+=bg-img($img, $pos: center, $att: scroll)
+  background: $att url($img-folder + $img) $pos no-repeat
+  background-size: cover
+  //background-image:
+  //background-position: $pos
+  //background-repeat: no-repeat
+  //background-attachment: $att
+
