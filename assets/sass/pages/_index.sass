@@ -165,6 +165,7 @@
     border: 2px solid #fff
     text-align: center
     transition: all .3s ease-in-out
+
     &:hover
       border-color: $accent
       color: $accent
@@ -192,3 +193,43 @@
     font-weight: 600
     font-size: .5em
     margin-top: 35px
+
+//Site footer
+.site-footer
+  @extend .std-padding
+  background-color: #353f47
+  color: #515f67
+  font-size: .857em
+  font-weight: 500
+
+  p
+    margin: 0
+
+
+.footer-nav
+  @extend .ul-unstyled
+  float: left
+  text-transform: uppercase
+
+  li
+    display: inline-block
+    &:before
+      content: '|'
+    &:first-child
+      &:before
+        content: ''
+      a
+        padding-left: 0
+
+  a
+    color: inherit
+    display: inline-block
+    padding: 0 10px
+    transition: all .3s ease-in-out
+
+    &:hover
+      text-decoration: none
+      color: #fff
+    
+.copyright
+  float: right
