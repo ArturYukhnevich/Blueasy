@@ -36,7 +36,7 @@
   @extend .text-uppercase
   font-size: 2.144em
   font-weight: 300
-  padding-bottom: 40px
+  padding-bottom: 30px
   margin-top: 0
 
   &:after
@@ -105,3 +105,72 @@
 @for $i from 1 through 8
   .thumb-#{$i}
     +bg-img('thumb' + $i + '.png')
+
+
+//Video
+
+.stn-video
+  @extend .std-padding
+  background-color: $font
+  color: #fff
+
+  .btn-ghost-gray
+    margin-bottom: 50px
+
+.stn-video-col
+  margin-top: -82px
+
+  @media (max-width: 992px)
+    margin-top: 0
+
+
+//Twitter
+.stn-twitter
+  @extend .std-padding
+  background-color: $accent
+  color: #fff
+
+  p
+    font-size: 2em
+    font-weight: 300
+
+  strong
+    font-weight: 500
+
+.stn-twitter-icon
+  font-size: 24px
+  float: right
+
+//Who is
+.stn-who-is
+  @extend .std-padding
+  +bg-img('who-is.png')
+  padding-bottom: 150px
+  opacity: .80
+  color: #fff
+
+.social-links
+  @extend .ul-unstyled
+
+  li
+    display: inline-block
+    margin-right: 20px
+
+  a
+    display: table
+    width: 65px
+    height: 65px
+    font-size: 30px
+    color: #fff
+    border: 2px solid #fff
+    text-align: center
+    transition: all .3s ease-in-out
+    &:hover
+      border-color: $accent
+      color: $accent
+      text-decoration: none
+
+    i
+      display: table-cell
+      vertical-align: middle
+
